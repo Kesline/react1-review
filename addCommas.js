@@ -8,12 +8,10 @@ function addCommas(number) {
     // Add commas to the integer part
     integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-    // Concatenate integer and decimal parts with a dot
+    // Concatenate integer and decimal parts with a dot (if present)
     if (decimalPart !== undefined) {
         return integerPart + '.' + decimalPart;
     } else {
         return integerPart;
     }
 }
-
-
